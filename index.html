@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Our Mission - Donate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #d2dae2;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            color: #485460;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            color: #485460;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        .donation-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(45deg, #485460, #5a6571);
+            border-radius: 15px;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .donation-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(72, 84, 96, 0.4);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px;
+        }
+
+        .icon img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .address-container {
+            background: rgba(210, 218, 226, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid rgba(210, 218, 226, 0.3);
+        }
+
+        .address-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+
+        .address {
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .address:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .address:active {
+            transform: scale(0.98);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(72, 84, 96, 0.2);
+        }
+
+        .footer p {
+            color: #485460;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #485460;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 10px 20px rgba(72, 84, 96, 0.3);
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .address {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Support Our Mission</h1>
+            <p>Your contribution helps us make a difference</p>
+        </div>
+
+        <!-- TON Network Section -->
+        <div class="donation-section">
+            <div class="section-title">
+                <div class="icon">
+                    <img src="https://ton.org/download/ton_symbol.svg" alt="TON" onerror="this.style.display='none'; this.parentElement.innerHTML='T';" />
+                </div>
+                <span>TON Network</span>
+            </div>
+            
+            <div class="address-container">
+                <div class="address-label">Friendly Address:</div>
+                <div class="address" onclick="copyToClipboard('yesiamshojib.ton')">
+                    yesiamshojib.ton
+                </div>
+            </div>
+
+            <div class="address-container">
+                <div class="address-label">Raw Address:</div>
+                <div class="address" onclick="copyToClipboard('UQB9RJPFZSNLDYkrbvB95eESr9ShBn9kvmsMSIyxG667Cpno')">
+                    UQB9RJPFZSNLDYkrbvB95eESr9ShBn9kvmsMSIyxG667Cpno
+                </div>
+            </div>
+        </div>
+
+        <!-- Binance Section -->
+        <div class="donation-section">
+            <div class="section-title">
+                <div class="icon">
+                    <img src="https://www.svgrepo.com/download/331309/binance.svg" alt="Binance" onerror="this.style.display='none'; this.parentElement.innerHTML='B';" />
+                </div>
+                <span>Binance</span>
+            </div>
+            
+            <div class="address-container">
+                <div class="address-label">Binance Pay ID:</div>
+                <div class="address" onclick="copyToClipboard('540636204')">
+                    540636204
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Thank you for your generous support! 💙</p>
+            <p>Every contribution helps us grow and serve better</p>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        Address copied to clipboard!
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                showNotification();
+            }).catch(function() {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = text;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                showNotification();
+            });
+        }
+
+        function showNotification() {
+            const notification = document.getElementById('notification');
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.donation-section');
+            
+            sections.forEach(section => {
+                section.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.02)';
+                });
+                
+                section.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
